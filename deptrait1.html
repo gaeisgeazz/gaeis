@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan basic</title>
+    <link rel="stylesheet" href="deptrait.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+</head>
+
+<body>
+    <div class="container">
+        <a href="bonus.html">
+            <button>bonus journalier</button>
+        </a>
+        <h1>Gestion de Solde</h1>
+        <form class="form-group">
+            <label for="amount" class="amount">Montant de 1000 Fcfa:</label>
+            <input type="number" id="amount" name="balance" min="1000" max="1000"
+                placeholder="Entrer un montant de 1000 Fcfa">
+        </form>
+        <div class="form-group">
+            <button onclick="initiateDeposit()">Déposer</button>
+            <button onclick="jours()">Retirer</button>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; text-align: center;">
+            <div id="balance">Solde: 0</div>
+        </div>
+    </div>
+    <div id="confirmation" class="container" style="display:none;">
+        <h1>Confirmation de Dépôt</h1>
+        <p>Copiez l'un des codes suivants et coller dans l'application téléphone :</p>
+        <div>
+            <div class="mtn">MTN <div class="code-box" onclick="copyCode('*126*14*674118322*1000#')">
+                    *126*14*674118322*1000#</div>
+            </div>
+            <div class="orange">ORANGE <div class="code-box" onclick="copyCode('#144*695694068*1000#')">
+                    #144*695694068*1000#</div>
+            </div>
+        </div>
+        <form id="confirmationForm">
+            <label for="transactionImage">Téléverser la capture du message de la transaction :</label>
+            <input type="file" id="transactionImage" name="balance" accept="image/*">
+            <button type="button" onclick="confirmDeposit()">Confirmer</button>
+        </form>
+
+    </div>
+    <footer>
+        <ul>
+            <li><a href="Accueil.html"><i class="fas fa-home"></i><span>Accueil</span></a></li>
+            <li><a href="Apropos.html"><i class="fas fa-info-circle"></i><span>À propos</span></a></li>
+            <li><a href="Partager.html"><i class="fas fa-share"></i><span>Partager</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        </ul>
+    </footer>
+    <script>
+        const username = localStorage.getItem('currentUsername');
+        document.getElementById('username').textContent = username ? username : 'Invité';
+    </script>
+
+    <script src="deptrait1.js"></script>
+
+</body>
+
+</html>

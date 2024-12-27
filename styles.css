@@ -1,0 +1,149 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.logo img {
+    height: 40px;
+}
+.username {
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+}
+
+span {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#user {
+    width: 40px;
+    height: 40px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.plans {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.button-plan {
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    background-color: #007bff;
+    /* Bouton sombre */
+    color: #e0e0e0;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #014ea1;
+    /* Changement de couleur au survol */
+    transform: translateY(-3px);
+    /* Légère animation au survol */
+}
+
+a {
+    text-decoration: none;
+}
+
+#link {
+    color: aqua;
+}
+
+.text {
+    text-align: left;
+    padding: 20px;
+}
+
+strong {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer ul li a i {
+    font-size: 2em;
+    /* Taille des icônes */
+    margin-bottom: 5px;
+    /* Espace entre l'icône et le texte */
+}
+
+
+ 
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    footer ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    footer ul li {
+        margin: 0 10px;
+    }
+}
