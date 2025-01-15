@@ -1,19 +1,20 @@
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #121212;
+    background: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    color: #e0e0e0;
+    color: #333;
 }
 
 .container {
-    background-color: #1e1e1e;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    background-color: #ffffff;
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 400px;
     width: 100%;
@@ -21,7 +22,7 @@ body {
 
 h1 {
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #333;
 }
 
 .form-group {
@@ -29,23 +30,24 @@ h1 {
 }
 
 .amount {
-    color: #b0b0b0;
+    color: #555;
 }
 
-input[type="number"], input[type="file"] {
+input[type="number"],
+input[type="file"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #333;
-    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
     margin-top: 5px;
-    background-color: #262626;
-    color: #e0e0e0;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 button {
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     background-color: #007bff;
     color: white;
     cursor: pointer;
@@ -55,46 +57,60 @@ button {
 }
 
 button:hover {
-    background-color: #014ea1;
+    background-color: #0056b3;
     transform: scale(1.05);
 }
 
 button:focus {
-    outline: 2px solid #ffffff;
+    outline: 2px solid #0056b3;
     outline-offset: 2px;
 }
 
-#balance, #confirmation h1, #confirmation p, #confirmation ul, #confirmation label {
+#balance,
+#confirmation h1,
+#confirmation p,
+#confirmation ul,
+#confirmation label {
     font-size: 20px;
     margin-top: 20px;
-    color: #e0e0e0;
+    color: #333;
 }
 
-.mtn, .orange {
+.mtn,
+.orange {
     display: flex;
     align-items: center;
-    padding:5px;
+    padding: 5px;
 }
 
+.flex-container {
+    display: flex;
+     align-items: center;
+}
+.num{
+border:solid #333 1px;
+padding: 3px;
+}
 .code-box {
-    background-color: #333;
-    border: 1px solid #444;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
     padding: 10px;
-    margin:0px 15px 0px ;
+    margin: 0px 15px 0px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-    color: #e0e0e0;
+    color: #333;
     flex-grow: 1;
-    text-align: center;
+    text-align: left;
+    border-radius: 12px;
 }
 
 .code-box:hover {
-    background-color: #444;
-    transform: scale(1);
+    background-color: #f0f0f0;
+    transform: scale(1.05);
 }
 
 .code-box:focus {
-    outline: 2px solid #6a11cb;
+    outline: 2px solid #0056b3;
     outline-offset: 2px;
 }
 
@@ -111,11 +127,16 @@ button:focus {
         font-size: 14px;
     }
 
-    input[type="number"], input[type="file"] {
+    input[type="number"],
+    input[type="file"] {
         padding: 8px;
     }
 
-    #balance, #confirmation h1, #confirmation p, #confirmation ul, #confirmation label {
+    #balance,
+    #confirmation h1,
+    #confirmation p,
+    #confirmation ul,
+    #confirmation label {
         font-size: 18px;
     }
 }
@@ -131,22 +152,29 @@ button:focus {
         font-size: 12px;
     }
 
-    input[type="number"], input[type="file"] {
+    input[type="number"],
+    input[type="file"] {
         padding: 6px;
     }
 
-    #balance, #confirmation h1, #confirmation p, #confirmation ul, #confirmation label {
+    #balance,
+    #confirmation h1,
+    #confirmation p,
+    #confirmation ul,
+    #confirmation label {
         font-size: 16px;
     }
 }
+
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #1f1f1f;
-    color: white;
+    background-color: #ffffff;
+    color: #333;
     text-align: center;
     padding: 10px 0;
+    border-top: 1px solid #ccc;
 }
 
 footer ul {
@@ -165,7 +193,7 @@ footer ul li {
 }
 
 footer ul li a {
-    color: white;
+    color: #007bff;
     text-decoration: none;
     font-size: 1.2em;
     display: flex;
@@ -178,8 +206,8 @@ footer ul li a:hover {
 }
 
 footer ul li a i {
-    font-size: 2em; /* Taille des icônes */
-    margin-bottom: 5px; /* Espace entre l'icône et le texte */
+    font-size: 2em;
+    margin-bottom: 5px;
 }
 
 /* Responsive adjustments */
